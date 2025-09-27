@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gujranwala Goats Sales and Purchase - Login</title>
+<link rel="icon" href="https://res.cloudinary.com/dn2kaltwg/image/upload/v1758995211/hseoh5jiurx1gyh9b7x7.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+  body{
+    width: -webkit-fill-available;
+    background: #000;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color:#ffffff;
+    background: url(https://images.unsplash.com/photo-1624806972468-ea9c923a425e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z29hdCUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D);
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6); /* black with 50% transparency */
+    }
+
+h2, p, a  {
+      position: relative; /* stay above overlay */
+      color: white;
+      text-align: center;
+    }
+
+    .password-wrapper {
+    position: relative;
+    width: 250px;
+    margin: 20px;
+  }
+
+  .password-wrapper input {
+    width: 100%;
+    padding: 10px 10px 10px 10px; /* space for icon */
+    font-size: 16px;
+    border: none;
+    outline: none;
+  }
+
+    .password-wrapper button {
+    width: 100%;
+    padding: 10px 10px 10px 10px; /* space for icon */
+    font-size: 16px;
+    margin: 11px;
+    cursor: pointer;
+    border: none;
+    font-weight: bolder;
+    background: skyblue;
+  }
+
+        .password-wrapper button:hover {
+  background:#000;
+  transition: 0.3s;
+  color: #ffffff;
+  }
+
+  .password-wrapper .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+  }
+
+  .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+</style>
+
+<body >
+
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="home.html">Home</a>
+  <a href="goats.html">Available Goats</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="login.html">Login</a>
+</div>
+
+<div style="padding:10px; width: -webkit-fill-available; display: flex; justify-content: space-around; font-size:30px;cursor:pointer; color: #ffffff; position: absolute; left: 0; top: 0; z-index:100; background:#000;" onclick="openNav()">&#9776; Menu <img width="60px" style="border-radius:45%" src="https://res.cloudinary.com/dn2kaltwg/image/upload/v1758995211/hseoh5jiurx1gyh9b7x7.jpg" /></div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+<h2>Login</h2>
+
+<form id="loginForm">
+
+    <div class="password-wrapper">
+  <input type="email" id="email" placeholder="Enter your email..." required>
+</div>
+  <div class="password-wrapper">
+  <input type="password" id="password" placeholder="Enter your password..." required>
+  <i class="fa-solid fa-eye toggle-password" onclick="togglePassword()"></i>
+</div>
+
+  <div class="password-wrapper">
+  <button type="submit">LOGIN</button>
+</div>
+<p style="text-align: center;">Don't have Account! <a style="text-decoration: none; font-weight: bolder; color: lightgreen;" href="register.html">Register</a></p>
+
+</form>
+<p id="msg"></p>
+
+<script>
+  function togglePassword() {
+    const input = document.getElementById("password");
+    const icon = document.querySelector(".toggle-password");
+    if (input.type === "password") {
+      input.type = "text";
+      icon.classList.remove("fa-eye");
+      icon.classList.add("fa-eye-slash");
+    } else {
+      input.type = "password";
+      icon.classList.remove("fa-eye-slash");
+      icon.classList.add("fa-eye");
+    }
+  }
+</script>
+
+
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwEs3eFUs7MlxdZ4FQPFFx6g2EFCc9dklhhkxt66qSPmpXVyOFUBS33nA4_ipam35ENbA/exec";
+
+document.getElementById("loginForm").addEventListener("submit", async e => {
+  e.preventDefault();
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+
+  let res = await fetch(SCRIPT_URL, {
+    method: "POST",
+    body: new URLSearchParams({ action: "login", email, password })
+  });
+  let data = await res.json();
+
+  if (data.success) {
+    localStorage.setItem("userEmail", data.email);
+    localStorage.setItem("role", data.role);
+    if (data.role === "admin") {
+      document.getElementById("msg").innerHTML = "Login to the Admin...";
+      setTimeout(function() {
+    window.location.href = "admin.html";
+}, 5000); // 5000 milliseconds = 5 seconds
+    } else {
+      document.getElementById("msg").innerHTML = "Login to the User...";
+      setTimeout(function() {
+    window.location.href = "profile.html";
+}, 5000); // 5000 milliseconds = 5 seconds
+    }
+  } else {
+    document.getElementById("msg").innerText = "Invalid credentials!";
+  }
+});
+</script>
+</body>
+</html>

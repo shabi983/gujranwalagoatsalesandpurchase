@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gujranwala Goats Sales and Purchase - Register</title>
+<link rel="icon" href="https://res.cloudinary.com/dn2kaltwg/image/upload/v1758995211/hseoh5jiurx1gyh9b7x7.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    body{
+    width: -webkit-fill-available;
+    background: url('https://wallpapers.com/images/featured/goat-7mo0ftmmd2695izw.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color:#ffffff;
+    background-position:center;
+  }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6); /* black with 50% transparency */
+    }
+
+    h2, p, a  {
+      position: relative; /* stay above overlay */
+      color: white;
+      text-align: center;
+    }
+
+    .password-wrapper {
+    position: relative;
+    width: 250px;
+    margin: 20px;
+  }
+
+  .password-wrapper input {
+    width: 100%;
+    padding: 10px 10px 10px 10px; /* space for icon */
+    font-size: 16px;
+    border: none;
+    outline: none;
+  }
+
+    .password-wrapper button {
+    width: 100%;
+    padding: 10px 10px 10px 10px; /* space for icon */
+    font-size: 16px;
+    margin: 11px;
+    cursor: pointer;
+    border: none;
+    background: skyblue;
+    font-weight: bolder;
+  }
+
+      .password-wrapper button:hover {
+  background:#000;
+  transition: 0.3s;
+  color: #ffffff;
+  }
+
+  .password-wrapper .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+  }
+
+    .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+</style>
+</head>
+<body>
+
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="home.html">Home</a>
+  <a href="goats.html">Available Goats</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="login.html">Login</a>
+</div>
+
+<div style="padding:10px; width: -webkit-fill-available; display: flex; justify-content: space-around; font-size:30px;cursor:pointer; color: #ffffff; position: absolute; left: 0; top: 0; z-index:100; background:#000;" onclick="openNav()">&#9776; Menu <img width="60px" style="border-radius:45%" src="https://res.cloudinary.com/dn2kaltwg/image/upload/v1758995211/hseoh5jiurx1gyh9b7x7.jpg" /></div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<h2>Register</h2>
+<form id="regForm">
+
+        <div class="password-wrapper">
+  <input type="text" id="name" placeholder="Full Name" required>
+</div>
+
+
+      <div class="password-wrapper">
+  <input type="email" id="email" placeholder="Enter your email..." required>
+</div>
+
+    <div class="password-wrapper">
+  <input type="password" id="password" placeholder="Enter your password..." required>
+  <i class="fa-solid fa-eye toggle-password" onclick="togglePassword()"></i>
+</div>
+
+        <div class="password-wrapper">
+  <input type="text" pattern="03[0-9]{2}-(?!1234567)(?!1111111)(?!7654321)[0-9]{7}" name="mobile_number" id="phone" placeholder="03xx-xxxxxxx" required>
+</div>
+ 
+
+   <div class="password-wrapper">
+  <button type="submit">REGISTER</button>
+</div>
+
+<p style="text-align: center;">Already Have Account! <a style="text-decoration: none; font-weight: bolder; color: lightgreen;" href="login.html">Login</a></p>
+  
+</form>
+<p id="msg"></p>
+
+<script>
+  function togglePassword() {
+    const input = document.getElementById("password");
+    const icon = document.querySelector(".toggle-password");
+    if (input.type === "password") {
+      input.type = "text";
+      icon.classList.remove("fa-eye");
+      icon.classList.add("fa-eye-slash");
+    } else {
+      input.type = "password";
+      icon.classList.remove("fa-eye-slash");
+      icon.classList.add("fa-eye");
+    }
+  }
+</script>
+
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwEs3eFUs7MlxdZ4FQPFFx6g2EFCc9dklhhkxt66qSPmpXVyOFUBS33nA4_ipam35ENbA/exec";
+
+document.getElementById("regForm").addEventListener("submit", async e => {
+  e.preventDefault();
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+  let phone = document.getElementById("phone").value;
+
+  let res = await fetch(SCRIPT_URL, {
+    method: "POST",
+    body: new URLSearchParams({ action: "register", name, email, password, phone })
+  });
+  let data = await res.json();
+
+  if (data.success) {
+    document.getElementById("msg").innerHTML = "Registration successful! Redirecting to <a style='text-decoration: none; font-weight: bolder; color: lightgreen;'  href='login.html'>Login</a>";
+    setTimeout(function() {
+    window.location.href = "login.html";
+}, 5000); // 5000 milliseconds = 5 seconds
+  } else {
+    document.getElementById("msg").innerText = data.message;
+  }
+});
+</script>
+</body>
+</html>
