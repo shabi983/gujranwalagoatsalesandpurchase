@@ -33,7 +33,7 @@
       background: rgba(0,0,0,0.6); /* black with 50% transparency */
     }
 
-h2, p, a  {
+h2, p  {
       position: relative; /* stay above overlay */
       color: white;
       text-align: center;
@@ -93,6 +93,8 @@ h2, p, a  {
   padding-top: 60px;
 }
 
+.menuBar{padding:20px; display: flex; justify-content: space-between; font-size:30px;cursor:pointer; color: #ffffff; position: sticky; left: 5px; top: 0; z-index:100; background:#000;}
+
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -123,10 +125,11 @@ h2, p, a  {
   <a href="goats.html">Available Goats</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
-  <a href="login.html">Login</a>
+  <a href="policies.html">Policies</a>
+  <a href="login.html" style="background: green; color: #ffffff;">Login</a>
 </div>
 
-<div style="padding:10px; width: -webkit-fill-available; display: flex; justify-content: space-around; font-size:30px;cursor:pointer; color: #ffffff; position: absolute; left: 0; top: 0; z-index:100; background:#000;" onclick="openNav()">&#9776; Menu <img width="60px" style="border-radius:45%" src="https://res.cloudinary.com/dn2kaltwg/image/upload/v1758995211/hseoh5jiurx1gyh9b7x7.jpg" /></div>
+<div class="menuBar" style="padding:10px; width: -webkit-fill-available; display: flex; justify-content: space-between; font-size:30px;cursor:pointer; color: #ffffff; position: absolute; left: 0; top: 0; z-index:100; background:#000;" onclick="openNav()">&#9776; Menu <img width="60px" style="border-radius:45%" src="https://res.cloudinary.com/dn2kaltwg/image/upload/v1758995211/hseoh5jiurx1gyh9b7x7.jpg" /></div>
 
 <script>
 function openNav() {
@@ -212,4 +215,3 @@ document.getElementById("loginForm").addEventListener("submit", async e => {
 </script>
 </body>
 </html>
-
