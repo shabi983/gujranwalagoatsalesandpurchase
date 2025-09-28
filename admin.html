@@ -22,10 +22,12 @@
   <a href="goats.html">Available Goats</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
+  <a href="policies.html">Policies</a>
   <a href="" onclick="logout()" style="background: red;">Logout</a>
+  <a href="admin.html" class="activeBtn" style="color: #ffffff; bottom: 10px; position: absolute; width: -webkit-fill-available;"><i class="fa fa-user"></i>  Admin</a>
 </div>
 
-<div style="padding:20px; display: flex; justify-content: space-around; font-size:30px;cursor:pointer; color: #ffffff; position: sticky; left: 5px; top: 0; z-index:9000; background:#000;" onclick="openNav()">&#9776; Menu <img width="60px" style="border-radius:45%" src="https://res.cloudinary.com/dn2kaltwg/image/upload/v1758995211/hseoh5jiurx1gyh9b7x7.jpg" /></div>
+<div class="menuBar" onclick="openNav()">&#9776; Menu <img width="60px" style="border-radius:45%" src="https://res.cloudinary.com/dn2kaltwg/image/upload/v1758995211/hseoh5jiurx1gyh9b7x7.jpg" /></div>
 
 <script>
 function openNav() {
@@ -136,6 +138,17 @@ position: fixed; top: 20px; right: 0; padding: 10px; background: #000000; color:
   transition: 0.3s;
 }
 
+ a.activeBtn{
+  background: green;
+  color: #000;
+}
+
+  a.activeBtn:hover{
+  background: ;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
 
 .sidenav {
   height: 100%;
@@ -162,6 +175,8 @@ position: fixed; top: 20px; right: 0; padding: 10px; background: #000000; color:
 .sidenav a:hover {
   color: #f1f1f1;
 }
+
+.menuBar{padding:20px; display: flex; justify-content: space-between; font-size:30px;cursor:pointer; color: #ffffff; position: sticky; left: 5px; top: 0; z-index:1000; background:#000;}
 
 .sidenav .closebtn {
   position: absolute;
@@ -206,19 +221,19 @@ position: fixed; top: 20px; right: 0; padding: 10px; background: #000000; color:
 <div class="goat-grid">
   <!-- Pending Goats -->
   <div id="pendingGoats" class="goat-section">
-    <h2 class="text-lg font-bold mb-2" style="position: sticky; top: 0; background: #ffffff; z-index: 1000;">🐐 Pending Goats</h2>
+    <h2 class="text-lg font-bold mb-2" style="position: sticky; top: 0; background: #ffffff; z-index: 900;">🐐 Pending Goats</h2>
     <div id="pendingList"></div>
   </div>
 
   <!-- Approved Goats -->
   <div id="approvedGoats" class="goat-section">
-    <h2 class="text-lg font-bold mb-2" style="position: sticky; top: 0; background: #ffffff; z-index: 1000;">✅ Approved Goats</h2>
+    <h2 class="text-lg font-bold mb-2" style="position: sticky; top: 0; background: #ffffff; z-index: 900;">✅ Approved Goats</h2>
     <div id="approvedList"></div>
   </div>
 
   <!-- Rejected Goats -->
   <div id="rejectedGoats" class="goat-section">
-    <h2 class="text-lg font-bold mb-2" style="position: sticky; top: 0; background: #ffffff; z-index: 1000;">❌ Rejected Goats</h2>
+    <h2 class="text-lg font-bold mb-2" style="position: sticky; top: 0; background: #ffffff; z-index: 900;">❌ Rejected Goats</h2>
     <div id="rejectedList"></div>
   </div>
 </div>
@@ -511,7 +526,7 @@ async function updateStatus(id,status){
           <a href="goats.html">Goats</a>
         </p>
         <p>
-          <a href="#!">Products</a>
+          <a href="https://g.page/r/CSKy8Y2gXE8NEAI/review" target="_blank">Reviews</a>
         </p>
         <p>
           <a href="about.html">About Us</a>
@@ -536,7 +551,7 @@ async function updateStatus(id,status){
           <a href="#!">Become an Affiliate</a>
         </p>
         <p>
-          <a href="#!">Shipping Rates</a>
+          <a href="policies.html">Our Policies</a>
         </p>
         <p>
           <a href="https://wa.me/923556614953" target="_blank">Help</a>
@@ -581,4 +596,3 @@ async function updateStatus(id,status){
 
 </body>
 </html>
-
