@@ -138,6 +138,16 @@ position: fixed; top: 20px; right: 0; padding: 10px; background: #000000; color:
   transition: 0.3s;
 }
 
+ a.activeBtn{
+  background: green;
+  color: #000;
+}
+
+  a.activeBtn:hover{
+  background: ;
+  color: #ffffff;
+  transition: 0.3s;
+}
 
 .sidenav {
   height: 100%;
@@ -218,10 +228,12 @@ input::-webkit-inner-spin-button {
   <a href="goats.html">Available Goats</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
+  <a href="policies.html">Policies</a>
   <a href="" onclick="logout()" style="background: red;">Logout</a>
+  <a href="profile.html" class="activeBtn" style="color: #ffffff; bottom: 10px; position: absolute; width: -webkit-fill-available;"><i class="fa fa-user"></i>  User</a>
 </div>
 
-<div style="padding:20px; display: flex; justify-content: space-around; font-size:30px;cursor:pointer; color: #ffffff; position: sticky; left: 5px; top: 0; z-index:9000; background:#000;" onclick="openNav()">&#9776; Menu <img width="60px" style="border-radius:45%" src="https://res.cloudinary.com/dn2kaltwg/image/upload/v1758995211/hseoh5jiurx1gyh9b7x7.jpg" /></div>
+<div style="padding:20px; display: flex; justify-content: space-between; font-size:30px;cursor:pointer; color: #ffffff; position: sticky; left: 5px; top: 0; z-index:9000; background:#000;" onclick="openNav()">&#9776; Menu <img width="60px" style="border-radius:45%" src="https://res.cloudinary.com/dn2kaltwg/image/upload/v1758995211/hseoh5jiurx1gyh9b7x7.jpg" /></div>
 
 <script>
 function openNav() {
@@ -732,7 +744,6 @@ function updateGoat() {
 }
 
 
-
 function logout() {
   localStorage.clear();
   window.location.href = "login.html";
@@ -787,7 +798,7 @@ function logout() {
           <a href="goats.html">Goats</a>
         </p>
         <p>
-          <a href="#!">Products</a>
+          <a href="https://g.page/r/CSKy8Y2gXE8NEAI/review" target="_blank">Reviews</a>
         </p>
         <p>
           <a href="about.html">About Us</a>
@@ -812,7 +823,7 @@ function logout() {
           <a href="#!">Become an Affiliate</a>
         </p>
         <p>
-          <a href="#!">Shipping Rates</a>
+          <a href="policies.html">Our Policies</a>
         </p>
         <p>
           <a href="https://wa.me/923556614953" target="_blank">Help</a>
@@ -856,4 +867,3 @@ function logout() {
 
 </body>
 </html>
-
