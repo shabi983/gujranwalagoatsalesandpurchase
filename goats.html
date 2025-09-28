@@ -185,6 +185,8 @@ position: fixed; top: 20px; right: 0; padding: 10px; background: #000000; color:
   margin-left: 50px;
 }
 
+.menuBar{padding:20px; display: flex; justify-content: space-between; font-size:30px;cursor:pointer; color: #ffffff; position: sticky; left: 5px; top: 0; z-index:100; background:#000;}
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -223,13 +225,14 @@ position: fixed; top: 20px; right: 0; padding: 10px; background: #000000; color:
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="index.html">Home</a>
-  <a href="goats.html">Available Goats</a>
+  <a href="goats.html" style="background: green; color: #ffffff;">Available Goats</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
+  <a href="policies.html">Policies</a>
   <a href="login.html">Login</a>
 </div>
 
-<div style="padding:20px; display: flex; justify-content: space-around; font-size:30px;cursor:pointer; color: #ffffff; position: sticky; left: 5px; top: 0; z-index:100; background:#000;" onclick="openNav()">&#9776; Menu <img width="60px" style="border-radius:45%" src="https://res.cloudinary.com/dn2kaltwg/image/upload/v1758995211/hseoh5jiurx1gyh9b7x7.jpg" /></div>
+<div class="menuBar" onclick="openNav()">&#9776; Menu <img width="60px" style="border-radius:45%" src="https://res.cloudinary.com/dn2kaltwg/image/upload/v1758995211/hseoh5jiurx1gyh9b7x7.jpg" /></div>
 
 <script>
 function openNav() {
@@ -492,7 +495,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <a href="goats.html">Goats</a>
         </p>
         <p>
-          <a href="#!">Products</a>
+          <a href="https://g.page/r/CSKy8Y2gXE8NEAI/review" target="_blank">Reviews</a>
         </p>
         <p>
           <a href="about.html">About Us</a>
@@ -517,7 +520,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <a href="#!">Become an Affiliate</a>
         </p>
         <p>
-          <a href="#!">Shipping Rates</a>
+          <a href="policies.html">Our Policies</a>
         </p>
         <p>
           <a href="https://wa.me/923556614953" target="_blank">Help</a>
@@ -561,4 +564,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
-
